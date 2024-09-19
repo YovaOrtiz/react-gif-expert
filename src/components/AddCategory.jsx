@@ -1,4 +1,6 @@
 import { useState } from "react"
+import React from 'react';  
+import PropTypes from "prop-types";
 
 export const AddCategory = ({onNewCategory}) => {
 
@@ -17,7 +19,7 @@ export const AddCategory = ({onNewCategory}) => {
     }
 
     return(
-        <form onSubmit={onSubmit}>
+        <form onSubmit={onSubmit} aria-label="form">
              <input 
               type="text"
               placeholder="Buscar gits"
@@ -27,4 +29,9 @@ export const AddCategory = ({onNewCategory}) => {
         </form>
        
     )
+}
+
+AddCategory.protoTypes ={
+    onNewCategory: PropTypes.func.isRequired,
+
 }
