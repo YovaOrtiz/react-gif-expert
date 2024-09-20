@@ -1,3 +1,5 @@
+import React from 'react';  
+import PropTypes from 'prop-types';
 import { GitItem } from "./GitItem";
 import { useFetchGrid } from "../hooks/useFetchGrid";
 
@@ -30,3 +32,7 @@ export const GitGrind = ({category}) => {
     </>
   )
 }
+
+GitGrind.propTypes = {
+  category: PropTypes.string.isRequired
+};
